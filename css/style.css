@@ -1,0 +1,81 @@
+html {
+  font-family: source-sans-pro, sans-serif;
+}
+
+body {
+  color: #222;
+}
+
+#background {
+	border-top: 5px solid #222;
+	height: 10px;
+}
+
+#page-header, #page-content, #page-footer {
+    margin: 0px auto;
+    width: 96%;
+    max-width: 620px;
+}
+
+#page-header {
+  border-bottom: 2px solid #222;
+}
+
+#header-content {
+  line-height: 64px;
+  font-weight: bold;
+  font-size: 31px;
+}
+
+#avatar {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+nav {
+  text-align: right;
+  margin-bottom: 2px;
+}
+
+nav a {
+  color: #222;
+  text-decoration: none;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+nav a.active {
+  border-bottom: 2px solid #222;
+  font-weight: bold;
+  color: #222;
+}
+
+nav a:hover {
+  color: #222;
+  border-bottom: 2px solid #222;
+}
+
+#page-content article {
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+article p {
+	font-size: 17px;
+	line-height: 27px;
+}
+
+article header h2 {
+	margin: 0;
+}
+
+article header h2 a {
+	text-decoration: none;
+	color: #222;
+}
+
+article header time {
+	color:#666;
+}
