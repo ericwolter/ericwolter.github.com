@@ -6,8 +6,11 @@ $(document).ready(function() {
 		if(d.indexOf("article") !== -1) {
 			$('#page-content').html(d);
 		} else {
-			alert('false password');
+			$('#password').addClass('false');
 		}
 		return false;
+	});
+	$('#password').keyup(function(e) {
+		$(this).removeClass('false');
 	});
 });

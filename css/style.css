@@ -81,5 +81,32 @@ article header h2 a {
 }
 
 article header time {
-	color:#666;
+	color: #666;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input {
+    background: #FFF;  
+    color: #222;  
+    border: solid 1px #222; 
+	margin: 2px;
+	transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+}
+
+input:focus {
+	border: solid 1px #174C82;
+	background: #c2e5ff;
+}
+
+input.false {
+	border: solid 1px #b5190e;
+	background: #ffcda2;
 }
