@@ -6,6 +6,10 @@
 <link href="css/normalize.css" rel="stylesheet"/>
 <link href="css/style.css" rel="stylesheet"/>
 <script src="http://use.edgefonts.net/source-sans-pro.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/tea.js"></script>
+<script src="js/wishlist-secret.js"></script>
+<script src="js/wishlist.js"></script>
 </head>
 <body>
 	<div id="background">&nbsp;</div>
@@ -15,25 +19,17 @@
 			<img id="avatar" src="img/avatar_bw.png" width="66px" height="66px"> ericwolter.com
 		</div>
 		<nav>
-			<a class="selected" href="index.html">me</a>
+			<a href="index.html">me</a>
 			<a href="blog.html">blog</a>
 			<a href="projects.html">projects</a>
 		</nav>
 	</header>
 	<section id="page-content">
 		<article>
-			<h2>Active Projects</h2>
-			<p>Project #1</p>
-			<p>Project #2</p>
-			<p>Project #3</p>
-			<p>Project #4</p>
-		</article>
-		<article>
-			<h2>Discontinued Projects</h2>
-			<p>Project #1</p>
-			<p>Project #2</p>
-			<p>Project #3</p>
-			<p>Project #4</p>
+			<h2>Wishlist</h2>
+			<form id="password-form" action="">
+				Password: <input type="text" id="password"><input type="submit" value="decrypt">
+			</form>
 		</article>
 	</section>
 	<footer id="page-footer">
