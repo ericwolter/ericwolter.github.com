@@ -33,7 +33,6 @@ a, a:active, a:visited {
 
 #avatar {
   vertical-align: middle;
-  margin-right: 5px;
 }
 
 nav {
@@ -109,4 +108,20 @@ input:focus {
 input.false {
 	border: solid 1px #b5190e;
 	background: #ffcda2;
+}
+
+section.project h3 img {
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+footer {
+    border-top: 2px solid #222;
+	padding-top: 10px;
+	font-size: 12px;
+	text-align: center;
+}
+
+footer p {
+	margin: 0;
 }
