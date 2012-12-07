@@ -1,0 +1,40 @@
+!!! 5
+html(lang="en")
+  head
+    block head
+      meta(charset="utf-8")
+      title ericwolter.com
+      link(rel="stylesheet", href="css/normalize.css")
+      link(rel="stylesheet", href="css/style.css")
+      script(src="http://use.edgefonts.net/source-sans-pro.js")
+      block scripts
+  body
+    #background &nbsp;
+
+    header#page-header
+      #header-content
+        img#avatar(src="img/avatar.png", width="64px", height="64px") 
+        | ericwolter.com
+      nav
+        - if (page.filename === "index.html")
+          a.selected(href="index.html") me
+        - else
+          a(href="index.html") me
+        - if (page.filename === "blog.html")
+          a.selected(href="blog.html") blog
+        - else
+          a(href="blog.html") blog
+        - if (page.filename === "projects.html")
+          a.selected(href="projects.html") projects
+        - else
+          a(href="projects.html") projects
+
+    section#page-content
+      block content
+
+    footer#page-footer
+      p &copy; #{ new Date().getFullYear() } #{ locals.owner }.
+      p 
+        | Icons adapted from 
+        a(href="http://www.glyphish.com/") Glyphish
+        | .
