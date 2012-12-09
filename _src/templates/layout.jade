@@ -35,7 +35,10 @@ html(lang="en")
       block content
 
     footer#page-footer
-      p &copy; #{ new Date().getFullYear() } #{ locals.owner }.
+      p 
+        | &copy; #{ new Date().getFullYear() } #{ locals.owner }. 
+        a(href="wishlist.html")
+          img(src="img/gift.png", width="10px", height="10px")
       p 
         | Icons adapted from 
         a(href="http://www.glyphish.com/") Glyphish
