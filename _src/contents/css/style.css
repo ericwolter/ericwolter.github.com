@@ -18,7 +18,7 @@ a, a:active, a:visited {
 #page-header, #page-content, #page-footer {
     margin: 0px auto;
     width: 96%;
-    max-width: 620px;
+    max-width: 680px;
 }
 
 #page-header {
@@ -57,6 +57,20 @@ nav a:hover {
   color: #222;
   border-bottom: 2px solid #222;
 }
+
+.greeting {
+  margin: 64px 0px;
+  text-align: center;
+}
+.greeting .name {
+  margin: 0px;
+  font-size: 64px;
+}
+
+.greeting a {
+  font-style: italic;
+}
+
 
 #page-content article {
 	margin-left: 1%;
