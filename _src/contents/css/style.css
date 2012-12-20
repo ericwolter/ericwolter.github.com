@@ -2,8 +2,12 @@ html {
   font-family: source-sans-pro, sans-serif;
 }
 
-body {
+h1, h2, h3, h4, h5, h6 {
   color: #222;
+}
+
+body {
+  color: #444;
 }
 
 a, a:active, a:visited {
@@ -65,12 +69,12 @@ nav a:hover {
 .greeting .name {
   margin: 0px;
   font-size: 64px;
+  font-weight: 900;
 }
 
 .greeting a {
   font-style: italic;
 }
-
 
 #page-content article {
 	margin-left: 1%;
@@ -86,6 +90,7 @@ article p {
 
 article header h2 {
 	margin: 0;
+  font-weight: 700;
 }
 
 article header h2 a {
@@ -130,7 +135,7 @@ section.project h3 img {
 }
 
 footer {
-    border-top: 2px solid #222;
+  border-top: 2px solid #222;
 	padding-top: 10px;
 	font-size: 12px;
 	text-align: center;
