@@ -7,37 +7,34 @@
     <title>ericwolter.com</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="http://use.edgefonts.net/source-sans-pro.js"></script>
+    <script src="//use.edgefonts.net/source-sans-pro:n3,n4,n9,i4.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/tea.js"></script>
     <script src="js/wishlist-secret.js"></script>
     <script src="js/wishlist.js"></script>
   </head>
   <body>
-    <div id="background">&nbsp;</div>
-    <header id="page-header">
-      <div id="header-content"><img id="avatar" src="img/avatar.png" width="64px" height="64px">ericwolter.com</div>
-      <nav><a href="index.html">me</a><a href="blog.html">blog</a><a href="projects.html">projects</a>
-      </nav>
+    <header id="sidebar">
+      <div id="sidebar-content">
+        <h1>Eric Wolter</h1>
+        <h2>Developer from Germany</h2>
+        <nav>
+          <ul>
+            <li><a href="projects.html">projects</a></li>
+            <li> <a href="https://twitter.com/oreon">@ericwolter</a></li>
+            <li><a href="">feed</a></li>
+          </ul>
+        </nav><a id="gift" href="wishlist.html"></a>
+      </div>
     </header>
-    <section id="page-content">
-      <article>
+    <div id="content" role="main">
+      <article id="wishlist-placeholder">
         <h2>Wishlist</h2>
         <form id="password-form">Password: 
           <input id="password" type="text">
           <input type="submit" value="decrypt">
         </form>
       </article>
-    </section>
-    <footer id="page-footer">
-      <p>
-         
-        &copy; 2012 Eric Wolter. <a href="wishlist.html"><img src="img/gift.png" width="10px" height="10px"></a>
-      </p>
-      <p>
-         
-        Icons adapted from <a href="http://www.glyphish.com/">Glyphish</a>.
-      </p>
-    </footer>
+    </div>
   </body>
 </html>

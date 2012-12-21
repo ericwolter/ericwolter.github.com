@@ -8,38 +8,24 @@ html(lang="en")
       title ericwolter.com
       link(rel="stylesheet", href="css/normalize.css")
       link(rel="stylesheet", href="css/style.css")
-      script(src="//use.edgefonts.net/source-sans-pro:n4,n7,n9,i4.js")
+      script(src="//use.edgefonts.net/source-sans-pro:n3,n4,n9,i4.js")
       block scripts
   body
-    #background &nbsp;
+    header#sidebar
+      div#sidebar-content
+        h1 Eric Wolter
+        h2 Developer from Germany
+        
+        nav
+          ul
+            li
+              a(href="projects.html") projects
+            li 
+              a(href="https://twitter.com/oreon") @ericwolter
+            li
+              a(href="") feed
 
-    header#page-header
-      #header-content
-        img#avatar(src="img/avatar.png", width="64px", height="64px") 
-        | ericwolter.com
-      nav
-        - if (page.filename === "index.html")
-          a.selected(href="index.html") me
-        - else
-          a(href="index.html") me
-        - if (page.filename === "blog.html")
-          a.selected(href="blog.html") blog
-        - else
-          a(href="blog.html") blog
-        - if (page.filename === "projects.html")
-          a.selected(href="projects.html") projects
-        - else
-          a(href="projects.html") projects
-
-    section#page-content
+        a#gift(href="wishlist.html")
+    
+    div#content(role="main")
       block content
-
-    footer#page-footer
-      p 
-        | &copy; #{ new Date().getFullYear() } #{ locals.owner }. 
-        a(href="wishlist.html")
-          img(src="img/gift.png", width="10px", height="10px")
-      p 
-        | Icons adapted from 
-        a(href="http://www.glyphish.com/") Glyphish
-        | .

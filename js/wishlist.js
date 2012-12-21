@@ -4,7 +4,7 @@ $(document).ready(function() {
 		var pwd =$('#password').val();
 		var d = Tea.decrypt(WISHLIST, pwd);
 		if(d.indexOf("article") !== -1) {
-			$('#page-content').html(d);
+			$('#wishlist-placeholder').replaceWith(d);
 		} else {
 			$('#password').addClass('false');
 		}
