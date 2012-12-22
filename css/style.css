@@ -132,9 +132,16 @@ input.false {
   display:block;
   width: 10px;
   height: 10px;
-  background-image: url(../img/gift_gray_small.png)
+  background-image: url(../img/gift@1x.png);
+  background-image: -webkit-image-set(
+                      url(../img/gift@1x.png) 1x,
+                      url(../img/gift@2x.png) 2x);
 }
 
 #gift:hover {
-  background-image: url(../img/gift_hover_small.png)
+  background-image: url(../img/gift_hover@1x.png);
+  background-image: -webkit-image-set(
+                      url(../img/gift_hover@1x.png) 1x,
+                      url(../img/gift_hover@2x.png) 2x);
+
 };
