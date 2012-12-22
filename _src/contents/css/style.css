@@ -41,6 +41,13 @@ h1, h2 {
   color: #222;
 }
 
+#sidebar h1 a img{
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 64px;
+  height: 64px;
+}
+
 #sidebar h2 {
   margin-top: 40px;
   font-size: 18px;
@@ -72,6 +79,7 @@ nav li {
 #content article {
   border-top: 1px solid #e3e3e3;
   padding-left: 50px;
+  padding-right: 50px;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -79,6 +87,7 @@ nav li {
 article header {
   margin-bottom: 25px;  
 }
+
 article h2 {
   margin: 0px 0px 8px 0px;
   font-weight: 900;
@@ -116,8 +125,8 @@ input {
     background: #FFF;  
     color: #222;  
     border: solid 1px #222; 
-  margin: 2px;
-  transition: all 0.2s ease-in-out;
+    margin: 2px;
+    transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
 }
@@ -151,4 +160,44 @@ input.false {
                       url(../img/gift_hover@1x.png) 1x,
                       url(../img/gift_hover@2x.png) 2x);
 
-};
+}
+
+@media only screen and (max-width: 1024px) {
+  #sidebar {
+    position: static;
+    padding: top;
+    width: 100%;
+    margin: 0;
+    padding: 2%;
+    text-align: center;
+  }
+
+  #sidebar-content {
+    margin: 0;
+  }
+
+  #content {
+    position: static;
+    margin: 0;
+    width: 100%;
+  }
+
+  #gift {
+    right: 10px;
+    top: 10px;
+    left: auto;
+    bottom: auto;
+  }
+
+  nav li {
+    display: inline;
+    margin-top: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  #content article {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
