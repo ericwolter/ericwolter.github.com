@@ -133,8 +133,9 @@ input.false {
 }
 
 #gift {
-  margin-left: 5%;
-  margin-top: 95%;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
   display:block;
   width: 10px;
   height: 10px;
