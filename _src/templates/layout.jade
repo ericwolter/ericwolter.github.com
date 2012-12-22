@@ -13,11 +13,14 @@ html(lang="en")
   body
     header#sidebar
       div#sidebar-content
-        h1 Eric Wolter
+        h1 
+          a(href="/") Eric Wolter
         h2 Developer from Germany
         
         nav
           ul
+            li
+              a(href="/") blog
             li
               a(href="projects.html") projects
             li 
@@ -25,7 +28,7 @@ html(lang="en")
             li
               a(href="") feed
 
-        a#gift(href="wishlist.html")
+      a#gift(href="wishlist.html")
     
     div#content(role="main")
       block content
