@@ -28,13 +28,15 @@ h1, h2 {
 
 #sidebar-content {
   margin-top: 80px;
-  margin-left: 13%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 #sidebar h1 {
   font-size: 30px;
   line-height: 30px;
-}
+/*  text-align: center;
+*/}
 
 #sidebar h1 a {
   text-decoration: none;
@@ -42,10 +44,11 @@ h1, h2 {
 }
 
 #sidebar h1 a img{
-  vertical-align: middle;
-  margin-right: 10px;
+  margin: 0 auto;
+  margin-left: 10px;
   width: 64px;
   height: 64px;
+  vertical-align: middle;
 }
 
 #sidebar h2 {
@@ -162,7 +165,8 @@ input.false {
 
 }
 
-@media only screen and (max-width: 1000px) {
+/*@media  only screen and (min-width: 768px),
+        only screen and (orientation:portrait) {
   #sidebar {
     position: static;
     padding: top;
@@ -200,4 +204,4 @@ input.false {
     padding-left: 5%;
     padding-right: 5%;
   }
-}
+}*/

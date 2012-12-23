@@ -11,26 +11,24 @@ html(lang="en")
       script(src="//use.edgefonts.net/source-sans-pro:n3,n4,n9,i4.js")
       block scripts
   body
-    header#sidebar
-      div#sidebar-content
-        h1
-          a(href="/")
-            img#avatar(src="img/avatar@2x.png")
-            | Eric Wolter
-        h2 Developer from Germany
-        
-        nav
-          ul
-            li
-              a(href="/") blog
-            li
-              a(href="projects.html") projects
-            li 
-              a(href="https://twitter.com/oreon") @ericwolter
-            li
-              a(href="") feed
+    header.page-header
+      a(href="/").page-title-link
+        img#avatar(src="img/avatar@2x.png")
+        h1 Eric Wolter
+      h2 Developer from Germany
+      
+      nav
+        ul
+          li
+            a(href="/") blog
+          li
+            a(href="projects.html") projects
+          li 
+            a(href="https://twitter.com/oreon") @ericwolter
+          li
+            a(href="") feed
 
-      a#gift(href="wishlist.html")
+    a#gift(href="wishlist.html")
     
     div#content(role="main")
       block content
