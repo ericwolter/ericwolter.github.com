@@ -81,8 +81,8 @@ nav li {
   border-bottom: 1px solid #e3e3e3;
   padding-left: 4%;
   padding-right: 4%;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 article header {
