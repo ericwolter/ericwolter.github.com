@@ -115,6 +115,10 @@ article p {
   vertical-align: middle;
 }
 
+.project a {
+  text-decoration: none;
+}
+
 input:focus,
 select:focus,
 textarea:focus,
@@ -161,4 +165,34 @@ input.false {
                       url(../img/gift_hover@1x.png) 1x,
                       url(../img/gift_hover@2x.png) 2x);
 
+}
+
+.mac-expose {
+  width: 350px;
+  height: 296px;
+  background-image: url(../img/mac.svg);
+  background-size: cover;
+  margin: 24px;
+}
+
+.mac-screenshot {
+  position: relative;
+  left: 15px;
+  top: 15px;
+  width: 320px;
+  height: 180px;
+}
+
+.mac-shine {
+  position: relative;
+  left: 147px;
+  top: -190px;
+  width: 203px;
+  height: 213px;
+  background-image: url(../img/mac_shine.svg);
+  background-size: cover;
+}
+
+.clear {
+  clear: both;
 }
