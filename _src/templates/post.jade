@@ -1,0 +1,11 @@
+extends layout
+
+block content
+
+  article.post
+    header
+      h2
+        a(href='posts/2012/11/30/blog-entry-3') #{page.title}
+      time(datetime="2012-11-30T18:00:40-05:00", pubdate="pubdate") November 30, 2012
+
+    section.content!= page.html

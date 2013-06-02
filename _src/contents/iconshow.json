@@ -1,0 +1,17 @@
+{
+  "template": "iconshow.jade",
+  "icons": [
+    { "src": "1.png" },
+    { "src": "2.png" },
+    { "src": "3.png" },
+    { "src": "4.png", "exclude":true },
+    { "src": "5.png", "exclude":true },
+    { "src": "6.png" },
+    { "src": "7.png" },
+    { "src": "8.png", "exclude":true },
+    { "src": "9.png" },
+    { "src": "10.png" },
+    { "src": "11.png" },
+    { "src": "12.png" }
+  ]
+}
