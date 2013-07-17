@@ -1,34 +1,34 @@
 !!! 5
-html(lang="en")
+block vars
+  - var bodyclass = null;
+html(lang='en')
   head
     block head
-      meta(charset="utf-8")
-      meta(http-equiv="X-UA-Compatible",content="IE=edge,chrome=1")
-      meta(name="viewport",content="width=device-width")
-      title ericwolter.com
-      link(rel="stylesheet", href="/css/normalize.css")
-      link(rel="stylesheet", href="/css/style.css")
-      script(src="//use.edgefonts.net/source-sans-pro:n3,n4,n9,i4.js")
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+      meta(name='viewport', content='width=device-width')
+      title
+        block title
+          = locals.name
+      link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
+      script(src="//use.edgefonts.net/source-sans-pro:n3,n4,n7.js")
+      link(rel='stylesheet', href='/css/normalize.css')
+      link(rel='stylesheet', href='/css/main.css')
       block scripts
   body
-    header.page-header
-      a(href="/").page-title-link
-        img#avatar(src="/img/avatar@2x.png")
-        h1 Eric Wolter
-      h2 Developer from Germany
-      
-      nav
-        ul
-          li
-            a(href="/") blog
-          li
-            a(href="/projects.html") projects
-          li 
-            a(href="https://twitter.com/oreon") @ericwolter
-          li
-            a(href="") feed
+    header#master-header
+      .content
+        a(href="/").page-title
+          h1 ericwolter.com
+        
+        nav
+          ul
+            li
+              a(href="/") blog
+            li
+              a(href="/projects.html") projects
+            li 
+              a(href="https://twitter.com/_ericwolter") @ericwolter
 
-    a#gift(href="/wishlist.html")
-    
-    div#content(role="main")
+    .content(role="main")
       block content
