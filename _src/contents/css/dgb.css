@@ -35,9 +35,10 @@ blockquote {
 	text-align: left;
 	width: 600px;
 	margin: 0 auto;
+	margin-top: 32px;
 }
 
-.slide {
+.photo {
 	position: relative;
 	background-repeat:no-repeat;
  	margin: 64px auto;
@@ -56,6 +57,23 @@ blockquote {
 	width: 1024px;
 	height: 680px;
  	background-size:1024px 680px;
+}
+
+.photo:before {
+	position: absolute;
+	font-size: 12px;
+	right: 8px;
+	top: 8px;
+	padding: 8px;
+	content: "edited";
+	background: #000;
+	border-radius: 8px;
+	opacity: 0.6;
+	width: 40px;
+}
+
+.photo:hover:before {
+	content: "original";
 }
 
 .title {
@@ -78,22 +96,22 @@ body:before{
     content: url(../img/projects/digitale-bildgestaltung/vortex_edited.jpg) url(../img/projects/digitale-bildgestaltung/vortex_original.jpg) url(../img/projects/digitale-bildgestaltung/waterworld_edited.jpg) url(../img/projects/digitale-bildgestaltung/waterworld_original.jpg) url(../img/projects/digitale-bildgestaltung/lake_edited.jpg) url(../img/projects/digitale-bildgestaltung/lake_original.jpg);
 }
 
-#slide-0 {
+#photo-2 {
  	background-image: url(../img/projects/digitale-bildgestaltung/vortex_edited.jpg);
 }
-#slide-0:hover {
+#photo-2:hover {
  	background-image: url(../img/projects/digitale-bildgestaltung/vortex_original.jpg);
 }
-#slide-1 {
+#photo-1 {
 	background-image: url(../img/projects/digitale-bildgestaltung/waterworld_edited.jpg);
 }
-#slide-1:hover {
+#photo-1:hover {
  	background-image: url(../img/projects/digitale-bildgestaltung/waterworld_original.jpg);
 }
-#slide-2 {
+#photo-0 {
  	background-image: url(../img/projects/digitale-bildgestaltung/lake_edited.jpg);
 }
-#slide-2:hover {
+#photo-0:hover {
  	background-image: url(../img/projects/digitale-bildgestaltung/lake_original.jpg);
 }
 
