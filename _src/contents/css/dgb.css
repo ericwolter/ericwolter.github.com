@@ -93,14 +93,14 @@ blockquote {
 
 body:before{
     display: none;
-    content: url(../img/projects/digitale-bildgestaltung/vortex_edited.jpg) url(../img/projects/digitale-bildgestaltung/vortex_original.jpg) url(../img/projects/digitale-bildgestaltung/waterworld_edited.jpg) url(../img/projects/digitale-bildgestaltung/waterworld_original.jpg) url(../img/projects/digitale-bildgestaltung/lake_edited.jpg) url(../img/projects/digitale-bildgestaltung/lake_original.jpg);
+    content: url(../img/projects/digitale-bildgestaltung/waterhole_edited.jpg) url(../img/projects/digitale-bildgestaltung/waterhole_original.jpg) url(../img/projects/digitale-bildgestaltung/waterworld_edited.jpg) url(../img/projects/digitale-bildgestaltung/waterworld_original.jpg) url(../img/projects/digitale-bildgestaltung/waterway_edited.jpg) url(../img/projects/digitale-bildgestaltung/waterway_original.jpg);
 }
 
 #photo-2 {
- 	background-image: url(../img/projects/digitale-bildgestaltung/vortex_edited.jpg);
+ 	background-image: url(../img/projects/digitale-bildgestaltung/waterhole_edited.jpg);
 }
 #photo-2:hover {
- 	background-image: url(../img/projects/digitale-bildgestaltung/vortex_original.jpg);
+ 	background-image: url(../img/projects/digitale-bildgestaltung/waterhole_original.jpg);
 }
 #photo-1 {
 	background-image: url(../img/projects/digitale-bildgestaltung/waterworld_edited.jpg);
@@ -109,32 +109,8 @@ body:before{
  	background-image: url(../img/projects/digitale-bildgestaltung/waterworld_original.jpg);
 }
 #photo-0 {
- 	background-image: url(../img/projects/digitale-bildgestaltung/lake_edited.jpg);
+ 	background-image: url(../img/projects/digitale-bildgestaltung/waterway_edited.jpg);
 }
 #photo-0:hover {
- 	background-image: url(../img/projects/digitale-bildgestaltung/lake_original.jpg);
+ 	background-image: url(../img/projects/digitale-bildgestaltung/waterway_original.jpg);
 }
-
-/*.fader {
-	position: relative;
-}
-
-.fade {
-	position: absolute;
-	left:0px;
-}
-
-.fader img{
-	height: 512px;
-}
-
-img.fade {
-	opacity: 1;
-	-webkit-transition: opacity 0.5s ease-in-out;
-  	-moz-transition: opacity 0.5s ease-in-out;
-  	-o-transition: opacity 0.5s ease-in-out;
-  	transition: opacity 0.5s ease-in-out;
-}
-img.fade:hover {
-	opacity: 0;
-}*/
