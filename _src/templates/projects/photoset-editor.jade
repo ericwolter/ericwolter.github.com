@@ -11,29 +11,30 @@ block content
   .project-page
     h2 Photoset Editor
 
-    .project-description
-      h3 Description
+    h4 DEMO - Stockholm at Night
 
-      :markdown
-        This is the code and document for my bachelor's thesis. It includes my own rough implementation of "Solid Simulation with Oriented Particles" by Matthias Müller and Nuttapong Chentanez. I developed a simple method to couple their oriented particles with a rigid body simulation built on top of the bullet physics library.
-
-      h3 Technologies
-      ul
-        li C/C++
-        li OpenGL
-        li bullet
-
-      h3 Source Code
-      :markdown
-        The source code can be found at [github](https://github.com/ericwolter/physically-based-skinning-of-rigid-bodies).
-
-
-    h4 Stockholm at Night
+    p Try the editor by dragging the photos around!
 
     .photoset
       .marker.horizontal(style="display:none")
       .marker.vertical(style="display:none")
       .photo-set
+
+    .project-description
+      h3 Description
+
+      :markdown
+        The photoset editor was created as a WYSIWYG component in my new blog engine. The user can rearrange photos (by uploading them) in a grid via a simple drag'n'drop gesture. The project is inspired by Tumblr's photoset feature which works in a similar fashion.
+
+      h3 Technologies
+      ul
+        li HTML5
+        li CSS3
+        li Javascript
+
+      h3 Source Code
+      :markdown
+        The source code can be found at [github](https://github.com/ericwolter/photoset-editor).
 
     script(type='text/javascript').
       var editor = new PhotosetEditor($('.photo-set').first());

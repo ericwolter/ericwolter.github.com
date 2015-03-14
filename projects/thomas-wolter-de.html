@@ -8,13 +8,14 @@
     </title>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/fittext.js"></script>
   </head>
   <body>
     <div role="main" class="content">
       <div class="project-page">
         <h2>thomas-wolter.de</h2>
         <ul class="banner two">
-          <li class="item two"><img src="/img/projects/thomas-wolter.de/screenshot0.png"></li>
+          <li class="item two"><img src="/img/projects/thomas-wolter.de/screenshot1.png"></li>
           <li class="item two">
             <video src="/img/projects/thomas-wolter.de/video0.mp4" controls loop></video>
           </li>
@@ -35,6 +36,15 @@
         </div>
       </div>
     </div>
+    <script>
+      var x = document.getElementsByClassName("project-title");
+      var i;
+      for (i = 0; i < x.length; i++) {
+          window.fitText(x[i], 1.2, { minFontSize: '12px', maxFontSize: '28px' });
+      }
+      
+      
+    </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

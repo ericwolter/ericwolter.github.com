@@ -4,6 +4,9 @@
     "url": "http://www.ericwolter.com",
     "owner": "Eric Wolter"
   },
+  "plugins": [
+    "./plugins/paginator.coffee"
+  ],
   "require": {
     "moment": "moment",
     "_": "underscore",
@@ -17,6 +20,6 @@
     "smartypants": true
   },
   "paginator": {
-    "perPage": 20
+    "perPage": 3
   }
 }

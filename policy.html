@@ -8,6 +8,7 @@
     </title>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/fittext.js"></script>
   </head>
   <body>
     <div role="main" class="content"><h2 id="privacy-policy">Privacy Policy</h2>
@@ -18,6 +19,15 @@
 <p>Molicula transmits anonymous crash information. I can see only the code section where the crash occured. This information helps me to fix and improve the app so it is more fun everybody. </p>
 
     </div>
+    <script>
+      var x = document.getElementsByClassName("project-title");
+      var i;
+      for (i = 0; i < x.length; i++) {
+          window.fitText(x[i], 1.2, { minFontSize: '12px', maxFontSize: '28px' });
+      }
+      
+      
+    </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
