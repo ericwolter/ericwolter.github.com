@@ -1,0 +1,45 @@
+extends ../layout
+
+block scripts
+  link(rel='stylesheet', href='/css/photoset.css')
+  script(type='text/javascript', src='/js/jquery.min.js')
+  script(type='text/javascript', src='/js/imagesloaded.min.js')
+  script(type='text/javascript', src='/js/photoset-editor.js')
+
+block content
+
+  .project-page
+    h2 Photoset Editor
+
+    .project-description
+      h3 Description
+
+      :markdown
+        This is the code and document for my bachelor's thesis. It includes my own rough implementation of "Solid Simulation with Oriented Particles" by Matthias Müller and Nuttapong Chentanez. I developed a simple method to couple their oriented particles with a rigid body simulation built on top of the bullet physics library.
+
+      h3 Technologies
+      ul
+        li C/C++
+        li OpenGL
+        li bullet
+
+      h3 Source Code
+      :markdown
+        The source code can be found at [github](https://github.com/ericwolter/physically-based-skinning-of-rigid-bodies).
+
+
+    h4 Stockholm at Night
+
+    .photoset
+      .marker.horizontal(style="display:none")
+      .marker.vertical(style="display:none")
+      .photo-set
+
+    script(type='text/javascript').
+      var editor = new PhotosetEditor($('.photo-set').first());
+      editor.setAll([
+        ['/img/projects/photoset-editor/pic5.jpg'],
+        ['/img/projects/photoset-editor/pic2.jpg','/img/projects/photoset-editor/pic1.jpg'],
+        ['/img/projects/photoset-editor/pic4.jpg','/img/projects/photoset-editor/pic0.jpg','/img/projects/photoset-editor/pic3.jpg'],
+        ['/img/projects/photoset-editor/pic6.jpg','/img/projects/photoset-editor/pic7.jpg'],
+      ]);

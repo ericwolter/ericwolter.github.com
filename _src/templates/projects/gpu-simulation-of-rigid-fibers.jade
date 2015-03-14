@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+
+  .project-page
+    h2 GPU Simulation of Rigid Fibers
+
+    ul.banner.two
+      li.item.two
+        img(src='/img/projects/gpu-simulation-of-rigid-fibers/screenshot0.jpg')
+      li.item.two
+        video(src='/img/projects/gpu-simulation-of-rigid-fibers/video0.mp4', controls, loop)
+
+    .project-description
+      h3 Description
+
+      :markdown
+        This is the code and document for my masters's thesis. It includes a GPU-acclerated implementation of the numerical method "A numerical method for simulations of rigid fiber suspensions" by Anna Karin Tornberg and Katarina Gustavsson. I reduced the required runtime of 24h on a CPU to just 30min on a GPU.
+
+      h3 Technologies
+      ul
+        li CUDA
+        li C/C++
+        li Fortran
+        li Python
+        li MATLAB
+
+      h3 Source Code
+      :markdown
+        The source code can be found at [github](https://github.com/ericwolter/rigidfibers).
