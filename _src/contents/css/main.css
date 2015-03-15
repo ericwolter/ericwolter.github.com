@@ -221,6 +221,11 @@ h2 {
 .project-page h2 {
   margin-bottom: 1em;
 }
+
+.project-page a {
+  color: #00a2ff;
+}
+
 .project-page .banner {
   position: relative;
   list-style: none;

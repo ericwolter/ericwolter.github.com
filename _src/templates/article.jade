@@ -5,4 +5,4 @@ block content
     header
       a.article-title(href=page.url)= page.title
       time(datetime=page.date)= moment(page.date).format('MMMM D, YYYY')
-    !{ typogr(page.html).typogrify() }
+  !{ typogr(page.html).typogrify() }
