@@ -212,6 +212,12 @@ h2 {
   }
 }
 
+.back {
+    position: absolute;
+    left: 4%;
+    top: 1%;
+}
+
 .project-page h2 {
   margin-bottom: 1em;
 }

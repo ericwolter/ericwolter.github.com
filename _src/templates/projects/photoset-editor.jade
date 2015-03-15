@@ -8,12 +8,15 @@ block scripts
 
 block content
 
+  a(href="/")
+    h3.back ⬅ Overview
+
   .project-page
     h2 Photoset Editor
 
     h4 DEMO - Stockholm at Night
 
-    p Try the editor by dragging the photos around!
+    p Try the editor by dragging the photos around with your mouse!
 
     .photoset
       .marker.horizontal(style="display:none")
@@ -24,7 +27,7 @@ block content
       h3 Description
 
       :markdown
-        The photoset editor was created as a WYSIWYG component in my new blog engine. The user can rearrange photos (by uploading them) in a grid via a simple drag'n'drop gesture. The project is inspired by Tumblr's photoset feature which works in a similar fashion.
+        The photoset editor was created as a WYSIWYG component in my new blog engine. The user can rearrange photos (by uploading them) in a grid via a simple drag'n'drop gesture. The project is inspired by Tumblr's photoset feature but has the advantage that it can handle unlimited photos and is open source.
 
       h3 Technologies
       ul
