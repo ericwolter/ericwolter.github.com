@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>SortMe</title>
+</head>
+<style>
+  /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{margin:0}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+  body {
+    margin: 0;
+  }
+  button, textarea {
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  #content {
+    max-width: 640px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 17px;
+    line-height: 21px;
+    font-family: 'Helvetica Neue','Segoe UI',sans-serif;
+    font-weight: 300;
+  }
+  #controls {
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .sort-button {
+    min-width: 100px;
+    min-height: 32px;
+    border: 2px solid #5856D6;
+    border-radius: 7px;
+    background: #fff;
+    font-size: 1em;
+    line-height: 1.4em;
+    margin: 10px;
+  }
+  .sort-button
+  #num {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  #list {
+    box-sizing:border-box;
+    width: 100%;
+    height: 375px;
+    border: 2px solid #5856D6;
+    border-radius: 7px;
+    padding: 7px 10px;
+    color: #5856D6;
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+</style>
+<body>
+  <div id="content" role="main">
+    <h1>SortMe</h1>
+    <div id="controls">
+      <button id="left" class="sort-button"></button>
+      <div>vs.</div>
+      <button id="right" class="sort-button"></button>
+    </div>
+    <textarea id="list"></textarea>
+    <div>
+      <button id="start">Start</button>
+    </div>
+  </div>
+  <script>
+    var num = 0;
+    var leftButton = document.getElementById('left');
+    var rightButton = document.getElementById('right');
+    var promiseResolve, promiseReject;
+
+    leftButton.addEventListener('click', function(ev) {
+      promiseResolve(true);
+    });
+    rightButton.addEventListener('click', function(ev) {
+      promiseResolve(false);
+    });
+
+    function getComparison(left, right) {
+      leftButton.innerHTML = left;
+      rightButton.innerHTML = right;
+
+      num = num + 1;
+
+      return new Promise(function(resolve, reject) {
+        promiseResolve = resolve;
+        promiseReject = reject;
+      });
+    }
+  </script>
+  <script>
+    async function mergeSort(arr)
+    {
+      if (arr.length < 2)
+        return arr;
+
+      var middle = parseInt(arr.length / 2);
+      var left   = arr.slice(0, middle);
+      var right  = arr.slice(middle, arr.length);
+
+      var leftSort = await mergeSort(left);
+      var rightSort = await mergeSort(right);
+
+      return merge(leftSort, rightSort);
+    }
+
+    async function merge(left, right)
+    {
+      var result = [];
+
+      while (left.length && right.length) {
+        try {
+          var comparison = await getComparison(left[0], right[0])
+          if (comparison) { // left[0] <= right[0]
+            result.push(left.shift());
+          } else {
+            result.push(right.shift());
+          }
+        } catch(e) {
+          console.log('error: ' + e);
+        }
+      }
+
+      while (left.length)
+        result.push(left.shift());
+
+      while (right.length)
+        result.push(right.shift());
+
+      return result;
+    }
+  </script>
+  <script>
+    var listElem = document.getElementById('list');
+    var controlsElem = document.getElementById('controls');
+    var startButton = document.getElementById('start');
+
+    startButton.addEventListener('click', function(ev) {
+      var list = listElem.value;
+      list = list.split(/\r|\n/);
+      list = list.map(n => n.trim()).filter(n => n);
+
+      mergeSort(list).then(v => listElem.value = v.join('\n') );
+    });
+
+  </script>
+</body>
+</html>
