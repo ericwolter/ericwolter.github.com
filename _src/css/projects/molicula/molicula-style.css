@@ -1,0 +1,117 @@
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    background: #f0efec;
+}
+body {
+    background: #f0efec;
+    margin: 0;
+    font: 300 16px/1 'Helvetica Neue', 'Segoe UI', sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+blockquote,
+figure,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+main,
+li {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-size: inherit;
+}
+strong {
+  font-weight: bold;
+}
+a,
+button {
+  color: inherit;
+  transition: .3s;
+}
+a {
+  text-decoration: none;
+}
+::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+h1 {
+  font-size: 50px;
+  font-weight: lighter;
+}
+#description {
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+#icon {
+  width: 80px;
+  height:80px;
+  vertical-align:middle;
+  margin-bottom: 8px;
+}
+p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+#preview {
+  width: 100%;
+  max-width: 240px;
+}
+#phone {
+  margin: 20px auto 0 auto;
+  background: #f00;
+  height: 553px;
+  width: 266px;
+  background: url(/img/projects/molicula/phone@2x.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align:center;
+  padding-top:60px;
+}
+
+@media all and (min-width: 45em) {
+  p {
+    font-size: 21px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  #description {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    margin:auto;
+    width: 61.8%;
+    height: 277px;
+    padding-right: 4%;
+    text-align: right;
+  }
+  #phone {
+    margin: auto;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 61.8%;
+  }
+}

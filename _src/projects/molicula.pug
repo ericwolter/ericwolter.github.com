@@ -1,0 +1,20 @@
+extends /layout.pug
+block variables
+    - var page = 'p-app'
+    - var title = 'molicula - A simple puzzle game about molecules'
+
+block scripts
+  link(rel='stylesheet', href='/css/projects/molicula/style.css')
+  include /google-analytics.html
+
+block content
+  #description
+    h1
+      img#icon(src="/img/projects/molicula/icon.png", alt="molicula icon")
+      | molicula
+    p A fascinatingly simple puzzle game.
+    p Can you find all solutions?
+    a(href="https://geo.itunes.apple.com/us/app/molicula-simple-puzzle-game/id693085736?mt=8" style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;background-size:contain;width:150px;height:50px;margin-top: 12px;")
+  #phone
+    video#preview(autoplay loop)
+      source(src="/img/projects/molicula/preview.mp4" type="video/mp4")

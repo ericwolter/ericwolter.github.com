@@ -1,0 +1,105 @@
+extends /layout.pug
+block variables
+    - var page = 'p-index'
+
+block content
+  #intro
+    #intro-message
+      h1 Eric Wolter
+      h2 Developer. Wannabe Designer.
+
+      .slider
+        .progress
+
+  a#logo.bg-swipe-fx(href='#') E
+
+  //- nav.main-menu(role='navigation' aria-label='main menu')
+  //-   a.link-fx.nav-fx(href='#projects') Projects
+  //-   a.link-fx.nav-fx(href='#projects') About
+  //-   a.link-fx.nav-fx(href='https://mailhide.io/e/bLVMN' onclick='mailhidepopup=window.open('https://mailhide.io/e/bLVMN','mailhidepopup','width=580,height=635'); return false;' Contact
+
+  .social-list(role='complementary')
+    a.underline-fx.social-link(href='https://mailhide.io/e/bLVMN' onclick='mailhidepopup=window.open("https://mailhide.io/e/bLVMN","mailhidepopup","width=580,height=635"); return false;') Mail
+    a.underline-fx.social-link(href='http://xing.to/ericwolter') Xing
+    a.underline-fx.social-link(href='https://github.com/ericwolter') GitHub
+    a.underline-fx.social-link(href='https://twitter.com/_ericwolter') Twitter
+
+  #banner(role='banner')
+    section#about
+      h3 Hallo – I'm Eric Wolter
+      p.
+        I am a software developer from Germany. 
+        I have a passion for mobile development, web development and physics simulations. 
+        I love playing with new technologies and learning everyday. 
+        I am currently working for Bosch Car Multimedia near Stuttgart.
+
+      menu(role='navigation' aria-label='banner menu')
+        a#contact-action.button(href='https://mailhide.io/e/bLVMN' onclick='mailhidepopup=window.open("https://mailhide.io/e/bLVMN","mailhidepopup","width=580,height=635"); return false;') Contact Me
+        a#discover-action.action-link.underline-fx.arrow-fx(href='#projects') Discover my projects
+    img#photo(src='/img/foto.jpg')
+
+  a(name='projects')
+  section#projects(role='main')
+    .project
+      .description
+        .description-content
+          h3 Apple Health Converter
+          time(datetime='2015') 2015
+          p Apple Health XML to CSV converter
+          a.action-link.underline-fx.arrow-fx(href='/projects/health-export') Start app
+      .device
+        img.device-macbook(src='/img/showcase/web-health-export.jpg')
+    .project
+      .description
+        .description-content
+          h3 GPU Simulation of Rigid Fibers
+          time(datetime='2015') 2015
+          p Fiber sedimentation
+          a.action-link.underline-fx.arrow-fx(href='/projects/gpu-simulation-of-rigid-fibers') Read more
+      .device
+        img.device-workstation(src='/img/showcase/work-rigid-fibers.jpg')
+    .project
+      .description
+        .description-content
+          h3 Photoset Editor
+          time(datetime='2015') 2015
+          p Drag'n'drop photo grid
+          a.action-link.underline-fx.arrow-fx(href='/projects/photoset-editor') Read more
+      .device
+        img.device-workstation(src='/img/showcase/web-photoset-editor.jpg')
+    .project
+      .description
+        .description-content
+          h3 Molicula
+          time(datetime='2013') 2013
+          p Logic puzzle game for iOS
+          a.action-link.underline-fx.arrow-fx(href='/projects/molicula') Read more
+      .device
+        img.device-tablet-smartphone(src='/img/showcase/ios-molicula.jpg')
+    .project
+      .description
+        .description-content
+          h3 Position Based Fluids
+          time(datetime='2013') 2013
+          p Realtime GPU water simulation
+          a.action-link.underline-fx.arrow-fx(href='/projects/position-based-fluids') Read more
+      .device
+        img.device-workstation(src='/img/showcase/work-position-based-fluids.jpg')
+    .project
+      .description
+        .description-content
+          h3 Physically Based Skinning of Rigid Bodies
+          time(datetime='2012') 2012
+          p Deformable bodies
+          a.action-link.underline-fx.arrow-fx(href='/projects/physically-based-skinning-of-rigid-bodies') Read more
+      .device
+        img.device-workstation(src='/img/showcase/work-physical-skinning.jpg')
+    .project
+      .description
+        .description-content
+          h3 thomas-wolter.de
+          time(datetime='2012') 2012
+          p 3D Snake Viewer
+          a.action-link.underline-fx.arrow-fx(href='/projects/thomas-wolter-de') Read more
+      .device
+        img.device-macbook(src='/img/showcase/web-thomas-wolter.jpg')

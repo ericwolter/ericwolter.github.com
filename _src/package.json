@@ -1,0 +1,26 @@
+{
+  "name": "eleventy",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "cd ./git_modules/apple-healthkit-csv/ && ./deploy.sh && cd ../../ && npx @11ty/eleventy build",
+    "serve": "cd ./git_modules/apple-healthkit-csv/ && ./deploy.sh && cd ../../ && npx @11ty/eleventy --serve",
+    "clean": "rm -r ../index.html ../projects ../img ../css ../js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0-beta.1",
+    "cssnano": "^4.1.10",
+    "jstransformer-markdown-it": "^2.1.0",
+    "node-vibrant": "^3.1.5",
+    "postcss": "^7.0.25",
+    "precss": "^4.0.0",
+    "terser": "^4.4.3"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

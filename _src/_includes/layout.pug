@@ -1,0 +1,17 @@
+block variables
+doctype html
+html(lang='en')
+
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    - var safeTitle = title ? title : "Eric Wolter"
+    title= safeTitle
+
+    include /google-analytics.html
+
+    link(rel='stylesheet' href='/css/style.css')
+    block scripts
+
+  body(id=page)
+    block content

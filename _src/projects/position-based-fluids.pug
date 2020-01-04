@@ -1,0 +1,36 @@
+extends /layout.pug
+block variables
+    - var page = 'p-research'
+
+block content
+
+  nav
+    a.action-fx.arrow-fx(href="/") Back
+
+  a.github-corner(href="https://github.com/ericwolter/position-based-fluids" aria-label="View source on GitHub")
+    include /github-corner.svg
+
+  header
+    h1 Position Based Fluids
+
+    #banner.position-based-fluids(role='banner')
+      .device-showcase.device-workstation
+        .blur-rect
+          img.blur(src="/img/projects/position-based-fluids/preview.png")
+        img.device-frame(src="/img/showcase/workstation-frame.png")
+        .video-mask
+          video(src='/img/projects/position-based-fluids/video0.mp4', controls, loop)
+
+  main
+    h2 Description
+
+    :markdown-it
+      Realtime GPU Water Simulation using position based dynamics. This approach is ideally suited for a large number of particles and to behave physically plausible. The implementation can simulate over 50.000 particles with 60 FPS on a mid-range GPU.
+
+      Original work by [Macklin et al.](http://blog.mmacklin.com/position-based-fluids/)
+
+    h2 Technologies
+    ul
+      li OpenCL
+      li OpenGL
+      li C++

@@ -1,0 +1,38 @@
+extends /layout.pug
+block variables
+    - var page = 'p-research'
+
+block content
+
+  nav
+    a.action-fx.arrow-fx(href="/") Back
+
+  header
+    h1 thomas-wolter.de
+
+    #banner.thomas-wolter-de(role='banner')
+      .device-showcase.device-macbook
+        .blur-rect
+          img.blur(src="/img/projects/thomas-wolter.de/preview.png")
+        img.device-frame(src="/img/showcase/macbook-frame.png")
+        .video-mask
+          video(src='/img/projects/thomas-wolter.de/video0.mp4', controls, loop)
+
+  main
+    h2 Description
+
+    :markdown-it
+      This is the personal website by Thomas Wolter ([thomas-wolter.de](http://thomas-wolter.de/)). The site was launched in 2000. The goal was to built the definitive resource for Rubik's Snake on the internet.
+
+      The highlight of the website, which followed later was a 3D-Viewer for the different figures the snake could be rotated into. Unfortunately this viewer used a combination of old technologies which slowly started to be incompatible and broken in modern browers.
+
+      This provided the perfect opportunity for me to complete redesign and reimplement the website in 2013. I completely revamped both the overall look and feel and the 3D-Viewer using modern techologies.
+
+      The new 3D-Viewer just requires the text notation of the figure as an input. The result can be freely rotated and looked at by the user. This is achieved using the excellent [three.js](http://threejs.org/) framework and its HTML canvas renderer.
+
+    h2 Technologies
+    ul
+      li HTML5
+      li Javascript
+      li CSS3
+      li three.js

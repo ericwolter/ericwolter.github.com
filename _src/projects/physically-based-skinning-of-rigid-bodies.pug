@@ -1,0 +1,34 @@
+extends /layout.pug
+block variables
+    - var page = 'p-research'
+
+block content
+
+  nav
+    a.action-fx.arrow-fx(href="/") Back
+
+  a.github-corner(href="https://github.com/ericwolter/physically-based-skinning-of-rigid-bodies" aria-label="View source on GitHub")
+    include /github-corner.svg
+
+  header
+    h1 Physically-based Skinning of Rigid Bodies
+
+    #banner.physically-based-skinning(role='banner')
+      .device-showcase.device-workstation
+        .blur-rect
+          img.blur(src="/img/projects/physically-based-skinning-of-rigid-bodies/preview.png")
+        img.device-frame(src="/img/showcase/workstation-frame.png")
+        .video-mask
+          video(src='/img/projects/physically-based-skinning-of-rigid-bodies/video0.mp4', controls, loop)
+
+  main
+    h2 Description
+
+    :markdown-it
+      This is the code and document for my bachelor's thesis. It includes my own rough implementation of "Solid Simulation with Oriented Particles" by Matthias Müller and Nuttapong Chentanez. I developed a simple method to couple their oriented particles with a rigid body simulation built on top of the bullet physics library.
+
+    h2 Technologies
+    ul
+      li C/C++
+      li OpenGL
+      li bullet

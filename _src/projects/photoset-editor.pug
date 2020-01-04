@@ -1,0 +1,50 @@
+extends /layout.pug
+block variables
+    - var page = 'p-research'
+
+block scripts
+  link(rel='stylesheet', href='/css/projects/photoset-editor/style.css')
+  script(type='text/javascript', src='/js/projects/photoset-editor/jquery.js')
+  script(type='text/javascript', src='/js/projects/photoset-editor/imagesloaded.js')
+  script(type='text/javascript', src='/js/projects/photoset-editor/app.js')
+
+block content
+
+  nav
+    a.action-fx.arrow-fx(href="/") Back
+
+  a.github-corner(style="position: static" href="https://github.com/ericwolter/photoset-editor" aria-label="View source on GitHub")
+    include /github-corner.svg
+
+  header
+    h1 Photoset Editor
+
+    h2 DEMO - Stockholm at Night
+    p Try the editor by dragging the photos around with your mouse!
+
+    #banner.photoset-editor(role='banner')
+      .photoset
+        .marker.horizontal(style="display:none")
+        .marker.vertical(style="display:none")
+        .photo-set
+
+  main
+    h2 Description
+
+    :markdown-it
+      The photoset editor was created as a WYSIWYG component in my new blog engine. The user can rearrange photos (by uploading them) in a grid via a simple drag'n'drop gesture. The project is inspired by Tumblr's photoset feature but has the advantage that it can handle unlimited photos and is open source.
+
+    h2 Technologies
+    ul
+      li HTML5
+      li CSS3
+      li Javascript
+
+  script(type='text/javascript').
+    var editor = new PhotosetEditor($('.photo-set').first());
+    editor.setAll([
+      ['/img/projects/photoset-editor/pic5.jpg'],
+      ['/img/projects/photoset-editor/pic2.jpg','/img/projects/photoset-editor/pic1.jpg'],
+      ['/img/projects/photoset-editor/pic4.jpg','/img/projects/photoset-editor/pic0.jpg','/img/projects/photoset-editor/pic3.jpg'],
+      ['/img/projects/photoset-editor/pic6.jpg','/img/projects/photoset-editor/pic7.jpg'],
+    ]);
