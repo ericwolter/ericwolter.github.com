@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "build": "cd ./git_modules/apple-healthkit-csv/ && ./deploy.sh && cd ../../ && npx @11ty/eleventy build",
+    "build": "cd ./git_modules/apple-healthkit-csv/ && ./deploy.sh && cd ../../ && rm -r ../index.html ../projects ../img ../css ../js && npx @11ty/eleventy build",
     "serve": "cd ./git_modules/apple-healthkit-csv/ && ./deploy.sh && cd ../../ && npx @11ty/eleventy --serve",
     "clean": "rm -r ../index.html ../projects ../img ../css ../js"
   },
