@@ -1,3 +1,3 @@
 <script>
-  window.location.replace("//ericwolter.com/projects/health-export");
+  window.location.replace("//ericwolter.com/projects/apple-health-export");
 </script>
