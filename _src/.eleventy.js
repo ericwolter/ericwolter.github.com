@@ -8,6 +8,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget('./js');
   eleventyConfig.addWatchTarget('./img');
 
+  eleventyConfig.addPassthroughCopy('./ads.txt');
+
   eleventyConfig.addPassthroughCopy('./img');
 
   eleventyConfig.addTransform("postcss", async function(content, outputPath) {
