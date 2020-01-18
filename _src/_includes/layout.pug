@@ -3,12 +3,18 @@ doctype html
 html(lang='en')
 
   head
+    script(async='true' src="https://www.googletagmanager.com/gtag/js?id=UA-42589062-1")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-42589062-1');
+
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     - var safeTitle = title ? title : "Eric Wolter"
     title= safeTitle
-
-    include /google-analytics.html
 
     link(rel='stylesheet' href='/css/style.css')
     block scripts
