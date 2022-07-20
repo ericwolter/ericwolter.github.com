@@ -18,7 +18,7 @@
     "node-vibrant": "^3.1.5",
     "postcss": "^7.0.25",
     "precss": "^4.0.0",
-    "terser": "^4.4.3"
+    "terser": "^4.8.1"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
